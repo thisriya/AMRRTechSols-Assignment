@@ -8,6 +8,12 @@ function ViewItems({ items, onItemSelect }) {
     const handleGoBackToDashboard = () => {
   navigate("/");
 };
+
+    const handleItemClick = (item) => {
+        navigate(`/item/${item.id}`); 
+    };
+
+
   return (
 <>
     
@@ -33,7 +39,7 @@ function ViewItems({ items, onItemSelect }) {
           <div
             key={item.id}
             className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-            onClick={() => onItemSelect(item)}
+            onClick={() => handleItemClick(item)}
           >
             <img
               src={item.coverImage}

@@ -39,13 +39,12 @@ function ItemDetail({ items }) {
 
   return (
     <>
-     
-
-    <div className="max-w-4xl mx-auto">
-         <button
+    
+    <div className='flex flex-row gap-4 p-10'>
+ <button
     type="button"
     onClick={handleGoBackToDashboard}
-    className="flex cursor-pointer items-center space-x-2 text-gray-600 hover:text-[#ff8633] transition-colors group ml-auto"
+    className="flex p-3 cursor-pointer items-center space-x-2 text-gray-600 hover:text-[#ff8633] transition-colors group"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -57,9 +56,10 @@ function ItemDetail({ items }) {
     </svg>
     <span>Back to Home</span>
   </button>
-      <button
+
+ <button
         onClick={() => navigate(-1)}
-        className="flex items-center text-blue-500 mb-4"
+         className="flex p-3 mr-auto cursor-pointer items-center  text-gray-600 hover:text-[#ff8633] transition-colors group "
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
@@ -67,7 +67,28 @@ function ItemDetail({ items }) {
         Back to Items
       </button>
 
-      <h2 className="text-2xl font-bold mb-6">{item.name}</h2>
+    </div>
+ 
+
+    <div className="max-w-4xl mx-auto">
+       
+
+     
+
+      <h2 className="text-2xl text-center font-semibold mb-6"><span>Item : </span>{item.name}</h2>
+
+      
+
+      <div className="py-5">
+        <div>
+          <h3 className="font-medium text-lg text-center text-gray-900">Type: {item.type}</h3>
+          <p className="mt-1"></p>
+        </div>
+        <div>
+          <h3 className="font-medium text-center text-lg text-gray-900">Description: {item.description}</h3>
+          <p className="mt-1"></p>
+        </div>
+      </div>
 
       <div className="mb-8 relative">
         <img
@@ -107,26 +128,15 @@ function ItemDetail({ items }) {
         </div>
       </div>
 
-      <div className="space-y-6">
-        <div>
-          <h3 className="font-medium text-lg text-gray-900">Type</h3>
-          <p className="mt-1">{item.type}</p>
-        </div>
-        <div>
-          <h3 className="font-medium text-lg text-gray-900">Description</h3>
-          <p className="mt-1">{item.description}</p>
-        </div>
-      </div>
-
-      <div className="mt-8">
-        <button
-          onClick={handleEnquire}
-          className="w-full md:w-auto bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 disabled:bg-blue-300"
-          disabled={enquirySent}
-        >
-          {enquirySent ? 'Enquiry Sent!' : 'Enquire About This Item'}
-        </button>
-      </div>
+<div className="flex justify-center py-8">
+  <button
+    onClick={handleEnquire}
+    className="text-center cursor-pointer bg-[#ff8633] text-white py-2 px-6 rounded-3xl disabled:bg-orange-300"
+    disabled={enquirySent}
+  >
+    {enquirySent ? 'Enquiry Sent!' : 'Enquire About This Item'}
+  </button>
+</div>
     </div>
     </>
   );
