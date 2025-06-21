@@ -16,7 +16,7 @@ function App() {
       name: 'Blue T-Shirt',
       type: 'Shirt',
       description: 'Comfortable cotton t-shirt in blue color',
-      coverImage: 'https://via.placeholder.com/300x400?text=Blue+T-Shirt',
+      coverImage: 'https://purepng.com/public/uploads/large/purepng.com-blue-long-sleeve-shirtbutton-front-shirtgarmentdressshirtbluelongsleeve-1421526308750fivmv.png',
       additionalImages: [
         'https://via.placeholder.com/300x400?text=Front+View',
         'https://via.placeholder.com/300x400?text=Back+View'
@@ -27,7 +27,7 @@ function App() {
       name: 'Black Jeans',
       type: 'Pant',
       description: 'Slim fit black jeans',
-      coverImage: 'https://www.bfgcdn.com/1500_1500_90/007-2147/arcteryx-gamma-ar-brushed-pant-winter-trousers-detail-2.jpg',
+      coverImage: 'https://cdn-img.prettylittlething.com/e/6/8/7/e687ca660e5f0e8d44b7cb01e52a2ba916148406_cna8526_5.jpg',
       additionalImages: [
         'https://via.placeholder.com/300x400?text=Front+View',
         'https://via.placeholder.com/300x400?text=Side+View'
