@@ -16,7 +16,7 @@ function App() {
       name: 'Blue T-Shirt',
       type: 'Shirt',
       description: 'Comfortable cotton t-shirt in blue color',
-      coverImage: 'https://purepng.com/public/uploads/large/purepng.com-blue-long-sleeve-shirtbutton-front-shirtgarmentdressshirtbluelongsleeve-1421526308750fivmv.png',
+      coverImage: 'https://havencraft.co.ke/wp-content/uploads/2021/03/Royal-Blue-Front.jpg',
       additionalImages: [
         'https://via.placeholder.com/300x400?text=Front+View',
         'https://via.placeholder.com/300x400?text=Back+View'
