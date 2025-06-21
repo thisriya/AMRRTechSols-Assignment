@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import AddItem from './components/AddItem';
 import ViewItems from './components/ViewItems';
 import ItemDetail from './components/ItemDetail';
@@ -8,7 +8,9 @@ import Home from './components/Home';
 
 
 function App() {
-  const [items, setItems] = useState([
+ const [items, setItems] = useState(() => {
+  const savedItems = localStorage.getItem('inventoryItems');
+  return savedItems ? JSON.parse(savedItems) : [
     {
       id: 1,
       name: 'Blue T-Shirt',
@@ -25,17 +27,28 @@ function App() {
       name: 'Black Jeans',
       type: 'Pant',
       description: 'Slim fit black jeans',
-      coverImage: 'https://via.placeholder.com/300x400?text=Black+Jeans',
+      coverImage: 'https://www.bfgcdn.com/1500_1500_90/007-2147/arcteryx-gamma-ar-brushed-pant-winter-trousers-detail-2.jpg',
       additionalImages: [
         'https://via.placeholder.com/300x400?text=Front+View',
         'https://via.placeholder.com/300x400?text=Side+View'
       ]
     }
-  ]);
+  ];
+});
 
-  const addNewItem = (newItem) => {
-    setItems([...items, { ...newItem, id: items.length + 1 }]);
-  };
+  useEffect(() => {
+    localStorage.setItem('inventoryItems', JSON.stringify(items));
+  }, [items]);
+
+ const addNewItem = (newItem) => {
+  setItems(prevItems => {
+    const newId = prevItems.length > 0 
+      ? Math.max(...prevItems.map(item => item.id)) + 1 
+      : 1;
+    return [...prevItems, { ...newItem, id: newId }];
+  });
+};
+
 
   return (
     <Router>
