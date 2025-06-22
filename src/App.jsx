@@ -18,8 +18,8 @@ function App() {
       description: 'Slim fit Gray jeans',
       coverImage: 'https://www.bfgcdn.com/1500_1500_90/007-2147/arcteryx-gamma-ar-brushed-pant-winter-trousers-detail-2.jpg',
       additionalImages: [
-        'https://via.placeholder.com/300x400?text=Front+View',
-        'https://via.placeholder.com/300x400?text=Side+View'
+        'https://cdn3.brentinyparis.com/199520-zoom_image/plain-grey-pants.jpg',
+        'https://backend.jorcustom.com/media/products/Cargo_Grey_Side1_Flared.jpg'
       ]
     }
   ];
