@@ -14,6 +14,7 @@ function AddItem({ onAddItem }) {
   const [success, setSuccess] = useState(false);
   const [additionalImage, setAdditionalImage] = useState('');
   const navigate = useNavigate();
+  
      const handleGoBackToDashboard = () => {
   navigate("/");
 };
@@ -38,7 +39,7 @@ function AddItem({ onAddItem }) {
     });
     setTimeout(() => {
       setSuccess(false);
-      navigate('/'); // Navigate back to View Items after success
+      navigate('/'); 
     }, 2000);
   };
 

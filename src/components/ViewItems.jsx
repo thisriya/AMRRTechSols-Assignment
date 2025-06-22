@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function ViewItems({ items, onItemSelect }) {
+function ViewItems({ items }) {
     const navigate = useNavigate();
     const handleGoBackToDashboard = () => {
   navigate("/");

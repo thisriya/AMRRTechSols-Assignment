@@ -45,7 +45,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddItem onAddItem={addNewItem} />} />
         <Route path="/view" element={<ViewItems items={items} />} />
-        
         <Route path="/item/:id" element={<ItemDetail items={items} />} />
       </Routes>
     </Router>
